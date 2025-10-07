@@ -1,0 +1,16 @@
+<Project>
+  <PropertyGroup>
+    <!-- Activa la cobertura automáticamente -->
+    <CollectCoverage>true</CollectCoverage>
+
+    <!-- Formato JSON (más compatible para herramientas externas) -->
+    <CoverletOutputFormat>cobertura</CoverletOutputFormat>
+
+    <!-- Ruta donde se guarda el reporte -->
+    <CoverletOutput>$(MSBuildProjectDirectory)\TestResults\coverage.xml</CoverletOutput>
+
+    <!-- Solo incluye la(s) clase(s) deseada(s) -->
+    <!--<Include>[*]StringManipulation.*</Include> --><!--Forma mas global de incluir lo que quires-->
+    <ExcludeByAttribute>ExcludeFromCodeCoverage</ExcludeByAttribute> <!-- Excluye métodos o clases con este atributo 2 manera de hacerlo-->
+  </PropertyGroup>
+</Project>

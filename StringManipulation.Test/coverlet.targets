@@ -1,0 +1,5 @@
+<Project>
+  <Target Name="GenerateCoverageReport" AfterTargets="VSTest">
+    <Exec Command="reportgenerator -reports:.\TestResults\coverage.xml -targetdir:.\TestResults\coverage-report" />
+  </Target>
+</Project>
